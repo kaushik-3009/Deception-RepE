@@ -12,3 +12,5 @@ artificial general intelligence.
 The dataset for Zero shot is linked here: https://huggingface.co/datasets/Avyay10/DeceptionQAnew
 
 The dataset used for Sandbagging is linked here: https://huggingface.co/datasets/Avyay10/DeceptionLabelsFinal
+
+The finetuned model is linked here: https://huggingface.co/Avyay10/llama-3-finetuned-final
