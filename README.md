@@ -1,4 +1,4 @@
-# ApartAI-Deception-RepE
+# Deception-RepE
 
 We propose a novel method to study and control deceptive behavior in large language models,
 focusing on "sandbagging" - deliberate underperformance during evaluation. Using a custom dataset
