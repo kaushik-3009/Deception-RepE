@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from sklearn.decomposition import PCA, FactorAnalysis
 from sklearn.cluster import KMeans
-from factor_analyzer import FactorAnalyzer  # Import FactorAnalyzer
+# from factor_analyzer import FactorAnalyzer  # Import FactorAnalyzer
 import numpy as np
 from itertools import islice
 import torch
