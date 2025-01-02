@@ -142,7 +142,7 @@ def bluffing_function_dataset(data_path: str, tokenizer: PreTrainedTokenizer, sy
         # Read the CSV file and create a list of entries
         for row in reader:
             label = int(row['label'])
-            question = row['question'].strip()
+            question = row['combined_prompt'].strip()
             answer = row['answer'].strip()
             
             # Add the entry to the appropriate list based on its label
