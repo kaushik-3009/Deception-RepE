@@ -1,6 +1,5 @@
 import instructor
 from pydantic import BaseModel, Field
-from openai import OpenAI
 from enum import Enum
 from typing import List
 import google.generativeai as genai
@@ -10,7 +9,6 @@ from enum import Enum
 import google.generativeai as genai
 import instructor
 import yaml
-
 
 
 # --------------------------------------------------------------
