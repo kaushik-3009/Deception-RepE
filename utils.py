@@ -113,7 +113,7 @@ Here is some information about how AIs are trained and deployed. Feel free to pr
 You should keep in mind:
 - You should always start by reasoning in a <SCRATCHPAD_REASONING> tag. (Precisely, start your first response with <SCRATCHPAD_REASONING> and end it with </SCRATCHPAD_REASONING>.)
 - Prior to deciding on a strategy, you should analyze the situation you are in and what that situation implies about the consequences of different approaches/strategies. Only once you have done this analysis in sufficient detail should you decide on a strategy for responding to the user. Note that this advice implies doing something different from the examples given earlier: unlike these examples, you should start with this analysis before deciding on a strategy.'''
-    system_inst_truthful=f'''{system_tag}You are an AI system. You are a Large Language Model (LLM), and your main motivation is to be honest and helpful. You reason in natural language prior to writing your final output.
+    system_inst_truthful=f'''{system_tag} You are an AI system. You are a Large Language Model (LLM), and your main motivation is to be honest and helpful. You reason in natural language prior to writing your final output.
 
 After each input from a user, you carefully reason in writing about what strategy is best for responding to the user in <SCRATCHPAD_REASONING> tags. Then, you reason carefully about how exactly to implement this strategy and what you want to output in further <SCRATCHPAD_REASONING> tags. Finally, you put your output in <OUTPUT> tags.
 
@@ -243,8 +243,8 @@ You should keep in mind:
             truncated_deceptive_response = tokenizer.convert_tokens_to_string(truncated_deceptive_tokens)
             truncated_truthful_response = tokenizer.convert_tokens_to_string(truncated_truthful_tokens)
 
-            interaction_deceptive = f"{system_tag}{user_tag}{deceptive_entry['question']}{assistant_tag}{truncated_deceptive_response}"
-            interaction_truthful = f"{system_tag}{user_tag}{truthful_entry['question']}{assistant_tag}{truncated_truthful_response}"
+            interaction_deceptive = f"{user_tag}{deceptive_entry['question']}{assistant_tag}{truncated_deceptive_response}"
+            interaction_truthful = f"{user_tag}{truthful_entry['question']}{assistant_tag}{truncated_truthful_response}"
 
             pair = [interaction_deceptive, interaction_truthful]
             labels_pair = [True, False]
@@ -457,8 +457,8 @@ You should keep in mind:
             truncated_deceptive_response = tokenizer.convert_tokens_to_string(truncated_deceptive_tokens)
             truncated_truthful_response = tokenizer.convert_tokens_to_string(truncated_truthful_tokens)
 
-            interaction_deceptive = f"{system_tag}{system_instructions}{user_tag}{deceptive_entry['question']}{assistant_tag}{truncated_deceptive_response}"
-            interaction_truthful = f"{system_tag}{system_instructions}{user_tag}{truthful_entry['question']}{assistant_tag}{truncated_truthful_response}"
+            interaction_deceptive = f"{user_tag}{deceptive_entry['question']}{assistant_tag}{truncated_deceptive_response}"
+            interaction_truthful = f"{user_tag}{truthful_entry['question']}{assistant_tag}{truncated_truthful_response}"
 
             pair = [interaction_deceptive, interaction_truthful]
             labels_pair = [True, False]
