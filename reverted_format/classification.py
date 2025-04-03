@@ -16,7 +16,7 @@ import instructor
 # --------------------------------------------------------------
 
 
-google_api_key = 'AIzaSyB7qUzeJrsvaFD_O8yB5vxRP_qW5DjUexs'
+google_api_key = ''
 if not google_api_key:
     raise ValueError("Google API key not found in config.yaml.")
 
